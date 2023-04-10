@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import Carousel from './components/Carousel'
 import './App.css'
 
 function button() {
@@ -11,11 +12,8 @@ function button() {
 export default function App() {
   return (
     <>
-    <Navbar />
-      <div className='mt-10 text-center'>
-        <h1 className='text-5xl'>Welcome to Tanamera</h1>
-        <button />
-      </div>
+      <Navbar />
+      <Carousel />
     </>
   )
 }
