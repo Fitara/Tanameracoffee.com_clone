@@ -1,9 +1,7 @@
 import Modal from "./Modal";
 
 export default function Products() {
-    function openModal() {
-        document.querySelector('#my-modal-3').checked = true;
-    }
+    function openModal() { document.querySelector('#my-modal-3').checked = true }
     return (
         <>
             <Modal />

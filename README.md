@@ -14,9 +14,9 @@ Struktur Folder:
 
 Target:
 
-- [ ] Lecture - React Intro
-- [ ] React: Class Component vs Function Component
-- [ ] Mempelajari State menggunakan useState
+- [v] Lecture - React Intro
+- [v] React: Class Component vs Function Component
+- [v] Mempelajari State menggunakan useState
 - [ ] Mengirim Props baik berupa sebuah state atau function
 - [ ] Event Handling (onClick, onChange, onSubmit)
 - [ ] Conditional Rendering di dalam React
@@ -62,7 +62,7 @@ Target:
 - [ ] Membuat Action Creators
 - [ ] Membuat Action Types
 - [ ] Lecture - Redux-thunk (handle async)
-- [ ] Cara menggunakan combineReducers
+- [] Cara menggunakan combineReducers
 
 **Report:**
 
