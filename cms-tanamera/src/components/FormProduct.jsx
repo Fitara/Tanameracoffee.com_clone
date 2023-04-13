@@ -9,7 +9,7 @@ export default function FormProduct() {
                 <form className="mt-2">
                     <div className="mb-2">
                         <label
-                            forHtml="name"
+                            forhtml="name"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Name
@@ -21,7 +21,7 @@ export default function FormProduct() {
                     </div>
                     <div className="mb-2">
                         <label
-                            forHtml="text"
+                            forhtml="text"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Description
@@ -33,7 +33,7 @@ export default function FormProduct() {
                     </div>
                     <div className="mb-2">
                         <label
-                            forHtml="number"
+                            forhtml="number"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Price
@@ -45,7 +45,7 @@ export default function FormProduct() {
                     </div>
                     <div className="mb-2">
                         <label
-                            forHtml="category"
+                            forhtml="category"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Category
@@ -57,7 +57,7 @@ export default function FormProduct() {
                     </div>
                     <div className="mb-2">
                         <label
-                            forHtml="category"
+                            forhtml="category"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Image Url
@@ -80,7 +80,7 @@ export default function FormProduct() {
                                 type="click"
                                 className="text-white bg-blue-700 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded text-sm px-5 py-1.5 text-center dark:bg-blue-700 dark:hover:bg-blue-800 dark:focus:ring-primary-800"
                             >
-                                Register
+                                Submit
                         </button>
                 </div>
             </div>

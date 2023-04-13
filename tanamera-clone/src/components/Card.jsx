@@ -1,18 +1,22 @@
-export default function Card() {
+import { Link } from "react-router-dom";
+
+export default function Card(props) {
     return (
         <>
             <section>
                 <div>
                     <div className="grid grid-cols-3 grid-rows-2 gap-4 ml-14 mr-14 mt-14 text-center">
-                    <div>
-                        <a className="card shadow">
-                            <img src="https://tanameracoffee.com/wp-content/uploads/2021/03/TC_RasunaNaturalFilter250g_210226-1-600x600.jpg" alt="" />
-                            <div className="bg-gray-100">
-                                <p className="text-base font-semibold tracking-wide mt-1">Rasuna Natural</p>
-                                <p className="font-sans uppercase text-xs text-black font-bold tracking-widest mb-2">From IDR 91 K</p>
-                            </div>    
-                        </a>    
-                    </div>
+                    <Link to={"/detail"}>
+                        <div>
+                            <a className="card shadow">
+                                <img src="https://tanameracoffee.com/wp-content/uploads/2021/03/TC_RasunaNaturalFilter250g_210226-1-600x600.jpg" alt="" />
+                                <div className="bg-gray-100">
+                                    <p className="text-base font-semibold tracking-wide mt-1">Rasuna Natural</p>
+                                    <p className="font-sans uppercase text-xs text-black font-bold tracking-widest mb-2">From IDR 91 K</p>
+                                </div>    
+                            </a>    
+                        </div>
+                    </Link>
                     <div>
                         <a className="card shadow rounded-none">
                             <img src="https://tanameracoffee.com/wp-content/uploads/2021/03/31092033-8b98-466e-bfe8-13be0fe6c27a.jpg" alt="" />

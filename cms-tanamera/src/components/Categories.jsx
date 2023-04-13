@@ -61,12 +61,20 @@ export default function Categories() {
                                             Today
                                         </td>
                                         <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap gap-2">
+                                            <div className="flex gap-2">
+                                                <a
+                                                className="text-blue-500 hover:text-blue-700"
+                                                href="#"
+                                            >
+                                                Edit
+                                            </a>
                                             <a
                                                 className="text-red-500 hover:text-red-700"
                                                 href="#"
                                             >
                                                 Delete
                                             </a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -83,12 +91,20 @@ export default function Categories() {
                                             Today
                                         </td>
                                         <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap gap-2">
+                                            <div className="flex gap-2">
+                                                <a
+                                                className="text-blue-500 hover:text-blue-700"
+                                                href="#"
+                                            >
+                                                Edit
+                                            </a>
                                             <a
                                                 className="text-red-500 hover:text-red-700"
                                                 href="#"
                                             >
                                                 Delete
                                             </a>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>

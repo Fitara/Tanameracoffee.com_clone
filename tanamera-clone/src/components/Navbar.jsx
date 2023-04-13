@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Navbar() {
     return (
         <>
@@ -15,9 +17,11 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="navbar-center">
-                <a className="btn btn-ghost normal-case text-xl">
-                  <img className="w-[200px]" src="https://tanameracoffee.com/wp-content/uploads/2020/11/logo.png" alt="" />
-                </a>
+                <Link to={"/"}>
+                  <a className="bg-transparent border-none text-xl" href="#">
+                    <img className="w-[180px]" src="https://tanameracoffee.com/wp-content/uploads/2020/11/logo.png" alt="" />
+                  </a>
+                </Link>            
               </div>
               <div className="navbar-end mr-10">
                 <button className="btn btn-sm btn-ghost btn-circle">
