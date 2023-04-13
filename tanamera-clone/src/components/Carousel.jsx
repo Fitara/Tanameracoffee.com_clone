@@ -1,6 +1,6 @@
 export default function Carousel() {
     return (
-        <div className="carousel mt-7 mb-10 w-[970px] h-[500px] ml-14 mr-14">
+        <div className="carousel mb-10 w-[970px] h-[500px] ml-14 mr-14">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://tanameracoffee.com/wp-content/uploads/2023/02/Banner-Website-Manakala-scaled.jpg" className="w-full" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

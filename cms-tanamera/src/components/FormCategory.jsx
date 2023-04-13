@@ -8,7 +8,7 @@ export default function FormCategory() {
                 <form className="mt-2">
                     <div className="mb-2">
                         <label
-                            forHtml="name"
+                            forhtml="name"
                             className="block text-sm font-semibold text-gray-800"
                         >
                             Category Name
