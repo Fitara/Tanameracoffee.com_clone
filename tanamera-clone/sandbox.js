@@ -23,16 +23,14 @@ store.dispatch({
   payload: 100,
 });
 
-{
-  value: 1;
-}
+// value: 1
+
 console.log(store.getState());
 
 store.dispatch({
   type: "counter/decremented",
   payload: 100,
 });
-{
-  value: 0;
-}
+
+// value: 0;
 
