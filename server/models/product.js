@@ -1,4 +1,5 @@
 "use strict";
+const { slug } = require("../helpers/slugy")
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
@@ -11,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Product.belongsTo(models.Category, { foreignKey: "categoryId" });
       Product.belongsTo(models.User, { foreignKey: "authorId" });
+      Product.hasMany(models.Images, { foreignKey: "productId"})
     }
   }
   Product.init(
@@ -64,15 +66,8 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Product",
     }
   );
-  Product.beforeCreate((product) => {
-    if (product.title) {
-      product.slug = product.title
-        .toLowerCase()
-        .trim()
-        .replace(/[^\w\s-]/g, "")
-        .replace(/[\s_-]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-    }
+  Product.beforeValidate((product) => {
+      product.slug = slug(product.name)
   });
 
   return Product;

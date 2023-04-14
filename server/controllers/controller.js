@@ -47,6 +47,92 @@ class Controller {
       next(err);
     }
   }
+
+  static async products(req, res, next) {
+    try {
+      const products = await Product.findAll({
+        attributes: { exclude: ["categoryId", "authorId"] },
+        include: [
+          {
+            model: User,
+            attributes: { exclude: "password" },
+          },
+          { model: Category },
+          { model: Images },
+        ],
+      });
+
+      res.status(200).json(products);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async detail(req, res, next) {
+    try {
+      const product = await Product.findOne({
+        where: { id: req.params.productId },
+        attributes: { exclude: ["categoryId", "authorId"] },
+        include: [
+          {
+            model: User,
+            attributes: { exclude: "password" },
+          },
+          { model: Category },
+          { model: Images },
+        ],
+      });
+
+      res.status(200).json(product);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async postProduct(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const newProduct = await Product.create(
+        {
+          name: req.body.name,
+          description: req.body.description,
+          price: req.body.price,
+          mainImg: req.body.mainImg,
+          categoryId: req.body.categoryId,
+          authorId: req.user.id,
+        },
+        { transaction: t }
+      );
+
+      images.forEach((el) => (el.productId = newProduct.id));
+
+      let newImages = await Images.bulkCreate(images, {
+        transaction: t,
+        validate: true,
+      });
+
+      await t.commit();
+
+      res.status(201).json({ message: `${req.body.name} has been added` });
+    } catch (err) {
+      await t.rollback();
+      next(err);
+    }
+  }
+
+  static async deleteProduct(req, res, next) {
+    try {
+      const product = await Product.findByPk(req.params.id);
+      if (!product) throw { name: "ProductNotFound" };
+
+      await Product.destroy({ where: { id: req.params.id } });
+
+      res.status(200).json({ message: `${product.name} has been deleted` });
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = Controller;
