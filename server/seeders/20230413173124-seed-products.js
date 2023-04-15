@@ -12,11 +12,14 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    const products = require("../data/products.json").map((el) => ({
-      ...el,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }));
+    const products = require("../data/products.json").map((el) => {
+      const { id, ...rest } = el;
+      return {
+        ...rest,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+    });
 
     await queryInterface.bulkInsert("Products", products);
   },

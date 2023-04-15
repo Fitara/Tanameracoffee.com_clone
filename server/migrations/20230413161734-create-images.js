@@ -12,6 +12,8 @@ module.exports = {
       productId: {
         type: Sequelize.INTEGER,
         references: { model: "Products", key: "id" },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       },
       imgUrl: {
         type: Sequelize.STRING,

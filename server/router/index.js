@@ -8,8 +8,8 @@ const errors = require("../middlewares/errors")
 router.post("/register", Controller.register)
 router.post("/login", Controller.login);
 
-router.use(product)
-router.use(category)
+router.use("/products", product)
+router.use("/categories", category)
 
 router.use(errors)
 

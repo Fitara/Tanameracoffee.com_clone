@@ -27,10 +27,14 @@ module.exports = {
       categoryId: {
         type: Sequelize.INTEGER,
         references: { model: "Categories", key: "id" },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       },
       authorId: {
         type: Sequelize.INTEGER,
         references: { model: "Users", key: "id" },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       },
       createdAt: {
         allowNull: false,

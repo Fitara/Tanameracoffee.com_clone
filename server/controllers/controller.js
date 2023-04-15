@@ -93,6 +93,8 @@ class Controller {
     const t = await sequelize.transaction();
 
     try {
+      const { imgUrl } = req.body;
+
       const newProduct = await Product.create(
         {
           name: req.body.name,
@@ -105,12 +107,9 @@ class Controller {
         { transaction: t }
       );
 
-      images.forEach((el) => (el.productId = newProduct.id));
+      imgUrl.forEach((el) => (el.productId = newProduct.id));
 
-      let newImages = await Images.bulkCreate(images, {
-        transaction: t,
-        validate: true,
-      });
+      await Images.bulkCreate(imgUrl, { transaction: t });
 
       await t.commit();
 
@@ -129,6 +128,95 @@ class Controller {
       await Product.destroy({ where: { id: req.params.id } });
 
       res.status(200).json({ message: `${product.name} has been deleted` });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async putProduct(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { imgUrl } = req.body;
+
+      const product = await Product.findByPk(req.params.id);
+      if (!product) throw { name: "ProductNotFound" };
+
+      await Product.update(
+        {
+          name: req.body.name,
+          description: req.body.description,
+          price: req.body.price,
+          mainImg: req.body.mainImg,
+          categoryId: req.body.categoryId,
+          authorId: req.user.id,
+        },
+        {
+          where: { id: req.params.id },
+          transaction: t,
+        }
+      );
+
+      await Images.destroy({
+        where: { productId: req.params.id },
+        transaction: t,
+      });
+
+      imgUrl.forEach((el) => (el.productId = req.params.id));
+
+      await Images.bulkCreate(imgUrl, { transaction: t });
+
+      await t.commit();
+      res.status(201).json({ message: `${product.name} has been edited` });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async categories(req, res, next) {
+    try {
+      const categories = await Category.findAll();
+
+      res.status(200).json(categories);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async postCategory(req, res, next) {
+    try {
+      const category = await Category.create({ name: req.body.name });
+
+      res.status(201).json({ message: `${category.name} has been added.` });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async deleteCategory(req, res, next) {
+    try {
+      const category = await Category.findByPk(req.params.id);
+      if (!category) throw { name: "CatNotFound" };
+
+      await Category.destroy({ where: { id: req.params.id } });
+
+      res.status(200).json({ message: `${category.id} has been deleted.` });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async putCategory(req, res, next) {
+    try {
+      const category = await Category.findByPk(req.params.id);
+      if (!category) throw { name: "CatNotFound" };
+
+      await Category.update(
+        { authorId: req.user.id, name: req.body.name },
+        { where: { id: req.params.id } }
+      );
+
+      res.status(200).json({ message: `${category.name} has been edited` });
     } catch (err) {
       next(err);
     }

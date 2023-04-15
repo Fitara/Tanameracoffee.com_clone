@@ -7,8 +7,8 @@ router.get("/", Controller.products);
 router.get("/:productId", Controller.detail);
 
 router.use(authen);
-router.post("/products", Controller.postProduct);
-// router.put("/product/:id", Controller.replaceProduct);
-router.delete("/product/:id", Controller.deleteProduct);
+router.post("/", Controller.postProduct);
+router.put("/:id", Controller.putProduct);
+router.delete("/:id", Controller.deleteProduct);
 
 module.exports = router;

@@ -1,136 +1,109 @@
 [
   {
-    "id": 1,
     "productId": 1,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Rasuna-Natural.jpg"
   },
   {
-    "id": 2,
     "productId": 1,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_RasunaNaturalFilter250g_210226-1.jpg"
   },
   {
-    "id": 3,
     "productId": 1,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 4,
     "productId": 2,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Solok-Natural-CM-TT.jpg"
   },
   {
-    "id": 5,
     "productId": 2,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/31092033-8b98-466e-bfe8-13be0fe6c27a.jpg"
   },
   {
-    "id": 6,
     "productId": 2,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 7,
     "productId": 3,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Mandailing-Washed.jpg"
   },
   {
-    "id": 8,
     "productId": 3,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_MandailingWashedEspresso250g_210226.jpg"
   },
   {
-    "id": 9,
     "productId": 3,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 10,
     "productId": 4,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Bali-Kintamani-Washed.jpg"
   },
   {
-    "id": 11,
     "productId": 4,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_KintamaniWashedFilter250g_210226-copy-3.jpg"
   },
   {
-    "id": 12,
     "productId": 4,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 13,
     "productId": 5,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_KintamaniWashedFilter250g_210226-copy-3.jpg"
   },
   {
-    "id": 14,
     "productId": 5,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_MtBatukaruWashedFilter250g_210226-copy-1.jpg"
   },
   {
-    "id": 15,
     "productId": 5,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 16,
     "productId": 6,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Bali-Mt.-Batukaru-Natural.jpg"
   },
   {
-    "id": 17,
     "productId": 6,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_MtBatukaruEspresso250kg_210226.jpg"
   },
   {
-    "id": 18,
     "productId": 6,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 19,
     "productId": 7,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Java-Sindoro-Honey.jpg"
   },
   {
-    "id": 20,
     "productId": 7,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_SindoroHoneyFilter250g_210226-1.jpg"
   },
   {
-    "id": 21,
     "productId": 7,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 22,
     "productId": 8,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Aceh-Gayo-Washed.jpg"
   },
   {
-    "id": 24,
     "productId": 8,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/TC_AcehGayoNaturalFilter250g_210226-copy-1.jpg"
   },
   {
-    "id": 25,
     "productId": 8,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   },
   {
-    "id": 26,
     "productId": 9,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Kerinci-Natural-1.jpg"
   },
   {
-    "id": 27,
     "productId": 9,
     "imgUrl": "https://tanamera.logixone.cloud/wp-content/uploads/2021/03/TC_KerinciNaturalFilter250g_210226.jpg"
   },
   {
-    "id": 28,
     "productId": 9,
     "imgUrl": "https://tanameracoffee.com/wp-content/uploads/2021/03/Category-Banner-Beans-scaled.jpg"
   }
