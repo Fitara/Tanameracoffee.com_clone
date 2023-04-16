@@ -1,4 +1,48 @@
-export default function Registration() {
+import { register } from "../stores/actions/actionCreator";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+export default function Registration(input) {
+    const [formRegister, setFormRegister] = useState({
+        username: "",
+        email: "",
+        password: "",
+        phoneNumber: "",
+        address: "",
+    });
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const registerAdminHandler = async (dataRegister) => {
+    try {
+      await dispatch(register(input));
+      navigate("/products");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const formRegisterOnChangeHandler = (event) => {
+    const newUser = {
+      ...formRegister,
+    };
+
+    newUser[event.target.name] = event.target.value;
+
+    setFormRegister(newUser);
+  };
+
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    const input = {
+      ...formRegister,
+    };
+
+    registerAdminHandler(input);
+  };
+
     return (
         <div className="flex flex-col">
             <div className="flex justify-center w-[800px]">
@@ -15,7 +59,9 @@ export default function Registration() {
                 </a>
             </div>
             <div className="flex justify-start w-fit ml-64 mt-2 mb-10 px-2 shadow-2xl">
-                <form className="flex flex-col text-gray-800 w-[700px] mt-4 gap-4">
+                <form
+                    onSubmit={submitHandler}
+                    className="flex flex-col text-gray-800 w-[700px] mt-4 gap-4">
                     <div className="flex justify-between">
                         <label
                             htmlFor="name"
@@ -25,6 +71,8 @@ export default function Registration() {
                         </label>
                             <div className="flex flex-col items-between">
                                 <input
+                                    value={formRegister.username}
+                                    onChange={formRegisterOnChangeHandler}                                
                                     type="text"
                                     name="username"
                                     className="text-sm  w-[400px] border-gray-100 rounded-sm shadow"
@@ -40,6 +88,8 @@ export default function Registration() {
                         </label>
                             <div className="flex flex-col items-between">
                                 <input
+                                    value={formRegister.email}
+                                    onChange={formRegisterOnChangeHandler}
                                     type="email"
                                     name="email"
                                     className="text-sm px-2 w-[400px] border-gray-100 rounded-sm shadow"
@@ -55,6 +105,8 @@ export default function Registration() {
                         </label>
                             <div className="flex flex-col items-between">
                                 <input
+                                    value={formRegister.password}
+                                    onChange={formRegisterOnChangeHandler}
                                     type="password"
                                     name="password"
                                     className="text-sm px-2 w-[400px] border-gray-100 rounded-sm shadow"
@@ -70,7 +122,9 @@ export default function Registration() {
                         </label>
                             <div className="flex flex-col items-between">
                                 <input
-                                    type="number"
+                                    value={formRegister.phoneNumber}
+                                    onChange={formRegisterOnChangeHandler}
+                                    type="text"
                                     name="phone"
                                     className="text-sm px-2 w-[400px] border-gray-100 rounded-sm shadow"
                                 />
@@ -78,13 +132,15 @@ export default function Registration() {
                     </div>
                     <div className="flex justify-between">
                         <label
-                            htmlFor="Phone"
+                            htmlFor="address"
                             className="text-sm font-medium text-gray-700 self-start"
                         >
                             Address
                         </label>
                             <div className="flex flex-col items-between">
                                 <input
+                                    value={formRegister.address}
+                                    onChange={formRegisterOnChangeHandler}
                                     type="text"
                                     name="address"
                                     className="text-sm px-2 w-[400px] border-gray-100 rounded-sm shadow"
@@ -99,7 +155,7 @@ export default function Registration() {
                                 Cancel
                             </button>
                             <button
-                                type="click"
+                                type="submit"
                                 className="text-white bg-blue-700 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded text-sm px-5 py-1.5 text-center dark:bg-blue-700 dark:hover:bg-blue-800 dark:focus:ring-primary-800"
                             >
                                 Register

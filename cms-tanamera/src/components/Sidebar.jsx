@@ -1,4 +1,6 @@
+import { logout } from "../stores/actions/actionCreator"
 import { Link } from "react-router-dom"
+import React from "react"
 
 export default function Sidebar() {
     return (
@@ -18,34 +20,34 @@ export default function Sidebar() {
                 <ul className="space-y-2 font-medium">
                     <Link to={"/products"}>
                         <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
+                            <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
                             <img className="w-[24px]" style={{filter: 'invert(1)',}} src="https://img.icons8.com/fluency-systems-regular/256/home.png" alt="" />
                             <span className="ml-3">Dashboard</span>
-                            </a>
+                            </div>
                         </li>
                     </Link>
                     <Link to={"/categories"}>
                         <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
+                            <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
                             <img className="w-[24px]" style={{filter: 'invert(1)',}} src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/256/external-tag-interface-kiranshastry-lineal-kiranshastry.png" alt="" />
                             <span className="flex-1 ml-3 whitespace-nowrap">Categories</span>
-                            </a>
+                            </div>
                         </li>
                         </Link>
                     <Link to={"/register"}>
                         <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
+                            <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
                             <img className="w-[24px]" style={{filter: 'invert(1)',}} src="https://img.icons8.com/fluency-systems-regular/256/add-user-male.png" alt="" />
                             <span className="flex-1 ml-3 whitespace-nowrap">Register Admin</span>
-                            </a>
+                            </div>
                         </li>
                     </Link>
                     <Link to={"/"}>
                         <li>
-                            <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
+                            <div onClick={logout} className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-orange-700">
                             <img className="w-[22px] ml-1" style={{filter: 'invert(1)',}} src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/256/external-online-account-logout-with-arrow-direction-mark-login-regular-tal-revivo.png" alt="" />
                             <span className="flex-1 ml-3 whitespace-nowrap">Sign Out</span>
-                            </a>
+                            </div>
                         </li>
                     </Link>    
                 </ul>

@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <>
-            <div className="font-sans font-extralight w-[960px] mt-10">
+            <div className="font-sans font-extralight w-[1240px] mt-10">
                 <footer className="flex justify-between footer ml-14 mr-14 border-t-2 p-5">
                     <div className="flex gap-20">
                         <div className="flex flex-col">

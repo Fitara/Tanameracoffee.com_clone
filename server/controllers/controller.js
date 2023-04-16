@@ -212,7 +212,7 @@ class Controller {
       if (!category) throw { name: "CatNotFound" };
 
       await Category.update(
-        { authorId: req.user.id, name: req.body.name },
+        { name: req.body.name },
         { where: { id: req.params.id } }
       );
 
