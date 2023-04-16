@@ -7,8 +7,7 @@ export default function Card({product}) {
     return (
         <>
             <section>
-                {/* <div> */}
-                    <div className="grid grid-cols-3 grid-rows-2 gap-4 ml-14 mr-14 mt-14 text-center">
+                <div className="grid grid-cols-3 grid-rows-2 gap-4 ml-14 mr-14 text-center">
                     <Link to={`/detail/${product.id}`}>
                             <div>  
                             <a className="card shadow">
@@ -20,14 +19,7 @@ export default function Card({product}) {
                             </a>    
                         </div>
                     </Link>   
-                    </div>  
-                {/* </div>
-                <div>
-                    <div className="h-[350px] mt-10 ml-14 mr-14" style={{backgroundImage: "url('https://www.hyundai.com/content/dam/hyundai/id/id/images/local/myhyundai/partners/partner-tanamera.png')", backgroundRepeat: "no-repeat", backgroundSize: "100%"}}>
-                        <p>TEST</p>
-                    </div>
-                </div>
-                <div className="divide-x"></div> */}
+                </div> 
             </section>
         </>
     )
