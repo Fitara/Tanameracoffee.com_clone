@@ -5,14 +5,14 @@ export function fetchProducts() {
     try {
       let response = await fetch(`${base_url}/products`);
       response = await response.json();
-      console.log("masuk jalan bebas!");
+      console.log("test");
       dispatch({
         type: "fetch/products",
         payload: response,
       });
         
     } catch (err) {
-      dispatch(productsFetchReject(err));
+      dispatch("error");
     }
   };
 }

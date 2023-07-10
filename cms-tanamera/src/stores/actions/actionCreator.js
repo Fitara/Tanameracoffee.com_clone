@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 
-const base_url = "http://localhost:3000";
+const base_url = "http://localhost:3000"; // "https://api.fitara.my.id"
 
 export function login(input) {
   return async function (dispatch) {

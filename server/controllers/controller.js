@@ -61,7 +61,6 @@ class Controller {
           { model: Images },
         ],
       });
-
       res.status(200).json(products);
     } catch (err) {
       next(err);

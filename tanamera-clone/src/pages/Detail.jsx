@@ -15,17 +15,28 @@ export default function Detail() {
         dispatch(detail(id))
     }, [])
 
+    useEffect(() => {
+    }, [product])
+
     return (
         <>
-            <pre>{ product }</pre>
             <p style={{ fontFamily: 'Abolition Test' }} className="ml-14 font-medium text-3xl mb-5 tracking-widest">Beans</p>
-            <div className="flex mx-auto h-[450px] ml-14 mr-14 mb-10">
+            <div className="flex mx-auto h-[600px] ml-14 mr-14 mb-10">
                 <div className="w-1/2 carousel">
-                    <div id="slide1" className="carousel-item relative w-full">
-                        <img src="https://tanameracoffee.com/wp-content/uploads/2021/03/31092033-8b98-466e-bfe8-13be0fe6c27a.jpg" className="w-full" />
-                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide3" className="text-black">❮</a> 
-                            <a href="#slide2" className="text-black">❯</a>
+                    <div id="slide1" className="carousel-item relative w-full" style={{ paddingBottom: 100 }}>
+                        <div className="absolute inset-0 right-0 left-0 top-0 bottom-0 transition-opacity duration-300 ease-in-out hover:opacity-50">
+                            <img src="https://tanameracoffee.com/wp-content/uploads/2021/03/31092033-8b98-466e-bfe8-13be0fe6c27a.jpg" className="w-full" />
+                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                <a href="#slide3" className="text-black">❮</a> 
+                                <a href="#slide2" className="text-black">❯</a>
+                            </div>
+                        </div>
+                        <div className="absolute right-0 left-0 top-0 bottom-0 hover:opacity-1">
+                            <img src="https://tanameracoffee.com/wp-content/uploads/2021/03/31092033-8b98-466e-bfe8-13be0fe6c27a.jpg" className="w-full" />
+                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                <a href="#slide3" className="text-black">❮</a> 
+                                <a href="#slide2" className="text-black">❯</a>
+                            </div>
                         </div>
                     </div>
                     <div id="slide2" className="carousel-item relative w-full">
@@ -51,7 +62,7 @@ export default function Detail() {
                     <p style={{ fontFamily: 'Abolition Test', }} className="text-4xl font-normal uppercase text-center tracking-wider mb-16">{ product?.name }</p>
                     <div>
                         <p style={{ fontFamily: 'AktivBold' }} className="text-sm font-semibold uppercase tracking-widest mb-2">Process</p>
-                        <p style={{ fontFamily: 'Abolition Test' }} className="text-lg font-mono text-justify font-thin uppercase mb-7 tracking-wider">{}</p>
+                        <p style={{ fontFamily: 'Abolition Test' }} className="text-lg font-mono text-justify font-thin uppercase mb-7 tracking-wider">{ product?.Category?.name}</p>
                     </div>
                     <div>
                         <p style={{ fontFamily: 'AktivBold' }} className="text-sm font-semibold uppercase tracking-widest mb-2">Tasting Note</p>
@@ -59,11 +70,10 @@ export default function Detail() {
                     </div>
                     <div>
                         <p style={{ fontFamily: 'AktivBold' }} className="text-sm font-serif font-semibold uppercase tracking-widest mb-2">Product Description</p>
-                        <p style={{ fontFamily: 'Futura' }} className="font-sans text-justify font-xs capitalize">Lubuk Gadang, Solok Selatan (Sumatera Barat) memiliki tanah dan dataran yang subur dan tinggi yang tepat untuk menanam biji kopi berkualitas tinggi, pada ketinggian 1500 - 1600 MSL. Kopi Solok dari Solok Selatan bisa juga disebut sebagai Kopi Solok Minang. Menariknya, kopi tersebut diproduksi secara organik dengan menggunakan pupuk alami tanpa pestisida yang menghasilkan kualitas lebih tinggi.
-Varian kopi Solok memberikan tingkat keasaman dan manis yang tinggi, high body dan juga menghasilkan aroma rasa jus apel, asam jawa dan choco almond.</p>
+                        <p style={{ fontFamily: 'Futura' }} className="font-sans text-justify font-xs capitalize">{ product?.description }</p>
                     </div>
                     <div className="flex align-baseline justify-start mt-10">
-                        <p style={{ fontFamily: 'Futura' }} className="">Posted by : Admin</p>
+                        <p style={{ fontFamily: 'Futura' }} className="">Posted by : { product?.User?.username }</p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux"
-// import { fetchProducts } from "../../stores/actions/actionCreator";
 import { fetchProducts } from "../../stores/actions/actionCreator";
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
@@ -18,11 +17,16 @@ export default function Home() {
 
     return (
         <>  
-            <Carousel />
-            {products?.map(el => {
-                return <Card product={el} />
-            })}
-            {/* <Card /> */}
+            <Carousel />  
+                <div className="">
+                    <div className="w-[1240px] grid grid-cols-3 grid-rows-2 gap-6 ml-12 mr-12 text-center">
+                    {products?.map(el => {
+                        return <Card className="flex" product={el} />
+                    })}
+                    </div>
+                </div>
+                <div className="h-[500px] mt-10 ml-14 mr-14" style={{backgroundImage: "url('https://www.hyundai.com/content/dam/hyundai/id/id/images/local/myhyundai/partners/partner-tanamera.png')", backgroundRepeat: "no-repeat", backgroundSize: "100%"}}></div>
+            <div className="divide-x"></div>
         </>
     )
 }
