@@ -7,6 +7,10 @@ export default function Card({product}) {
     return (
         <>
             <section>
+<<<<<<< HEAD
+=======
+                <div className="grid grid-cols-3 grid-rows-2 gap-4 ml-14 mr-14 text-center">
+>>>>>>> a3db09aa7374354229986a050b3dcacb6f42c59b
                     <Link to={`/detail/${product.id}`}>
                 {/* <div className="grid grid-cols-3 grid-rows-2 gap-4 ml-14 mr-14 text-center"> */}
                             <div>  
@@ -20,6 +24,10 @@ export default function Card({product}) {
                         </div>
                 {/* </div>  */}
                     </Link>   
+<<<<<<< HEAD
+=======
+                </div> 
+>>>>>>> a3db09aa7374354229986a050b3dcacb6f42c59b
             </section>
         </>
     )

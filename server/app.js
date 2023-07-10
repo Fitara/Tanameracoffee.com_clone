@@ -1,7 +1,10 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
+<<<<<<< HEAD
 console.log(process.env, "<<<");
+=======
+>>>>>>> a3db09aa7374354229986a050b3dcacb6f42c59b
 const PORT = process.env.PORT || 3000;
 require("dotenv").config();
 const cors = require("cors");

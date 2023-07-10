@@ -16,6 +16,10 @@ export default function Detail() {
     }, [])
 
     useEffect(() => {
+<<<<<<< HEAD
+=======
+        console.log(product, "<<<<<<<<<<<<<<");
+>>>>>>> a3db09aa7374354229986a050b3dcacb6f42c59b
     }, [product])
 
     return (
