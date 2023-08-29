@@ -1,6 +1,6 @@
 ## Project Name: tanameracoffee.com clone with React, Inline Tailwind CSS, Fullstack Features, and Role-Based Access
 
-Welcome to the "Tanamera Coffee Clone" project repository! This comprehensive project aims to replicate the Tanamera Coffee website while incorporating a full stack approach, including React for the front-end, Inline Tailwind CSS for styling, PostgreSQL for the database, Express.js for the server, and Redux for state management. The project also implements React Router for user and admin routes, Redux-Thunk for handling asynchronous actions, and SQL transactions for data integrity. Let's explore the project in more detail:
+Welcome to the "Tanamera Coffee Clone" 1 WEEK project repository! This comprehensive project aims to replicate the Tanamera Coffee website while incorporating a full stack approach, including React for the front-end, Inline Tailwind CSS for styling, PostgreSQL for the database, Express.js for the server, and Redux for state management. The project also implements React Router for user and admin routes, Redux-Thunk for handling asynchronous actions, and SQL transactions for data integrity. Let's explore the project in more detail:
 
 ### Key Features
 
