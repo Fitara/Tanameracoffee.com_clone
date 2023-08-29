@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux"
-import { detail } from "../../stores/actions/actionCreator";
+import { useDispatch, useSelector } from "react-redux";
+import { detail } from "../redux/actions/actionCreator";
 import { useParams } from "react-router-dom"
 import { useEffect } from "react";
 

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { fetchProducts } from "../../stores/actions/actionCreator";
+import { fetchProducts } from "../redux/actions/actionCreator";
 
 export default function Card({ product }) {
   return (

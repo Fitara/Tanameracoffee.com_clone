@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../stores/actions/actionCreator";
+import { fetchProducts } from "../redux/actions/actionCreator";
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
 import { useEffect } from "react";
