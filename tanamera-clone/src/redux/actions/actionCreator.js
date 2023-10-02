@@ -5,7 +5,6 @@ export function fetchProducts() {
     try {
       let response = await fetch(`${base_url}/products`);
       response = await response.json();
-      console.log("test");
       dispatch({
         type: "fetch/products",
         payload: response,

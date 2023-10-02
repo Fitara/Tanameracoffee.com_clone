@@ -1,0 +1,7 @@
+.icons-stroke:hover path {
+    stroke: red;
+}
+
+.icons-fill:hover path {
+    fill: red
+}

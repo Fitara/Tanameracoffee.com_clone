@@ -1,15 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { fetchProducts } from "../redux/actions/actionCreator";
 
 export default function Card({ product }) {
   return (
     <>
         <Link to={`/detail/${product.id}`}>
-          {/* <div> */}
             <div>
-              <a className="card shadow w-[400px]">
+              <div className="card shadow w-[400px]">
                 <img src={product.mainImg} alt="" />
                 <div className="bg-gray-100">
                   <p className="text-base font-semibold tracking-wide mt-1">
@@ -19,9 +15,8 @@ export default function Card({ product }) {
                   From IDR {product.price}
                   </p>
                 </div>
-              </a>
+              </div>
             </div>
-          {/* </div>  */}
         </Link>
     </>
   );

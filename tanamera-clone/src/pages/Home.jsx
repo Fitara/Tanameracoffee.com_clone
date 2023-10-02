@@ -23,7 +23,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="grid grid-cols-3 grid-rows-2 mx-auto gap-5 text-center">
                   {products?.map((el) => {
-                    return <Card product={el} />;
+                    return <Card key={el.id} product={el} />;
                   })}
               </div>
             </div>

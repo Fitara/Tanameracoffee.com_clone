@@ -21,7 +21,7 @@ export default function Detail() {
 
     return (
         <>
-            <p style={{ fontFamily: 'Abolition Test' }} className="ml-14 font-medium text-3xl mb-5 tracking-widest">Beans</p>
+            <div style={{ fontFamily: 'Abolition Test' }} className="ml-14 font-medium text-3xl mb-5 tracking-widest">Beans</div>
             <div className="flex mx-auto h-[600px] ml-14 mr-14 mb-10">
                 <div className="w-1/2 carousel">
                     <div id="slide1" className="carousel-item relative w-full" style={{ paddingBottom: 100 }}>
@@ -56,9 +56,9 @@ export default function Detail() {
                     </div>
                 </div>
                 <div className="w-1/2 overflow-y-scroll p-10 bg-purple-100">
-                    <p className="flex justify-end">
+                    <div className="flex justify-end">
                         <img className="w-[24px] h-[24px] mr-1" src="https://img.icons8.com/windows/256/hearts.png" alt="" /><p className="font-semibold"> Add to wishlist</p>
-                    </p>
+                    </div>
                     <p className="text-sm font-serif font-bold text-center uppercase mt-10">Beans</p>
                     <p style={{ fontFamily: 'Abolition Test', }} className="text-4xl font-normal uppercase text-center tracking-wider mb-16">{ product?.name }</p>
                     <div>

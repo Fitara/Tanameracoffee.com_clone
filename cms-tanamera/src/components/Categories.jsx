@@ -40,7 +40,7 @@ export default function Categories() {
           <p className="text-white text-xs py-1.5 ml-2">Create Category</p>
         </label>
       </div>
-      <div className="flex flex-col ml-48 mb-5 mb-10 rounded-lg shadow-2xl">
+      <div className="flex flex-col ml-48 mb-10 rounded-lg shadow-2xl">
         <div className="overflow-x-auto">
           <div className="text-center p-1.5 w-full inline-block align-middle">
             <div className="overflow-hidden border rounded-lg">
