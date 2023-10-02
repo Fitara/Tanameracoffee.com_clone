@@ -1,5 +1,4 @@
 const errors = async function (err, req, res, next) {
-  console.log(err, "<< Read this errors >>>>>>>>>>>>>>>>>");
   if (
     err.name === "SequelizeValidationError" ||
     err.name === "SequelizeUniqueConstraintError"

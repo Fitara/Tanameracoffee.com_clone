@@ -21,7 +21,7 @@ export default function Home() {
         <Carousel />
           <div className="container mx-auto">
             <div className="flex justify-center">
-              <div className="grid grid-cols-3 grid-rows-2 mx-auto gap-5 text-center">
+              <div className="grid grid-cols-3 grid-rows-3 mx-auto gap-5 text-center">
                   {products?.map((el) => {
                     return <Card key={el.id} product={el} />;
                   })}

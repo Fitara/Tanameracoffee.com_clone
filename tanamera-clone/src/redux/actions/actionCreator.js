@@ -1,7 +1,7 @@
 const base_url = "http://localhost:3000";
 
 export function fetchProducts() {
-  return async function (dispatch, getState) {
+  return async function (dispatch) {
     try {
       let response = await fetch(`${base_url}/products`);
       response = await response.json();
@@ -17,7 +17,7 @@ export function fetchProducts() {
 }
 
 export function detail(params) {
-  return async function (dispatch, getState) {
+  return async function (dispatch) {
     try {
       let response = await fetch(`${base_url}/products/${params}`);
       response = await response.json();
