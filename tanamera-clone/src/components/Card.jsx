@@ -5,7 +5,7 @@ export default function Card({ product }) {
     <>
         <Link to={`/detail/${product.id}`}>
             <div>
-              <div className="card shadow w-[400px]">
+              <div className="card shadow w-[375px]">
                 <img src={product.mainImg} alt="" />
                 <div className="bg-gray-100">
                   <p className="text-base font-semibold tracking-wide mt-1">
